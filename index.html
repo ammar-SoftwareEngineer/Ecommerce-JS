@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/all.min.css" />
+    <link href="src/output.css" rel="stylesheet" />
+    <title>E-commerce</title>
+  </head>
+
+  <body
+    dir="rtl"
+    class="bg-gray-800 text-white"
+    style="font-family: 'Rubik', sans-serif"
+  >
+    <nav class="bg-gray-900 p-4 fixed top-0 w-full z-10 mb-6">
+      <div class="container flex max-w-6xl mx-auto gap-5 items-center sm:gap-2">
+        <div class="w-full relative">
+          <input
+            type="text"
+            class="rounded-full bg-gray-700 p-1 pr-10 focus:w-full"
+            placeholder="ابحث عن المنتج..."
+            id="search"
+          />
+          <i
+            class="fas fa-search absolute top-1/2 left-5 -translate-y-1/2 text-lg"
+          ></i>
+        </div>
+        <div class="relative">
+          <i class="fa-solid fa-bag-shopping text-lg"></i>
+          <small
+            id="countCart"
+            class="bg-red-500 w-5 h-5 flex justify-center items-center absolute -top-1 -left-3 text-center rounded-full text-sm"
+          >
+            0
+          </small>
+        </div>
+      </div>
+    </nav>
+
+    <section>
+      <div
+        class="container flex flex-col max-w-6xl mx-auto mt-28 sm:flex-row"
+      >
+      <div class="hero-section flex">
+        <div class="content-hero">
+          <h1 class="text-5xl text-yellow-400 mb-8 ">ابحث عن منتجك المفضل</h1>
+          <p class="text-lg ">ما عليك الا ان تختار الفئة التي تريد التسوق منها</p>
+          <button class="text-yellow-400 border-2 border-yellow-400 px-5 py-2 rounded-md mt-6 hover:bg-yellow-400 hover:text-black">تسوق الان</button>
+        </div>
+        <div class="image flex justify-center">
+          <img class="w-1/4" src="image/Rectangle 1.png" alt="">
+          <img class="w-1/4" src="image/Rectangle 2.png" alt="">
+        </div>
+      </div>
+ 
+    </div>
+    </section>
+
+    <main class="p-4">
+      <div class="container flex flex-col max-w-6xl mx-auto mt-28 sm:flex-row">
+        <div class="category space-y-4 p-2 w-full sm:max-w-[10rem]">
+          <h3 class="text-xl">الفئات</h3>
+          <div id="filter-container">
+            <div class="camera">
+              <input type="checkbox" class="check" id="cameras" />
+              <label for="cameras">كاميرات</label>
+            </div>
+            <div class="smartphones">
+              <input type="checkbox" class="check" id="smartphones" />
+              <label for="smartphones">هواتف</label>
+            </div>
+            <div class="games">
+              <input type="checkbox" class="check" id="games" />
+              <label for="games">اجهزة العاب</label>
+            </div>
+            <div class="televisions">
+              <input type="checkbox" class="check" id="televisions" />
+              <label for="televisions">شاشات</label>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="products w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 place-content-center p-4 max-w-6xl mx-auto"
+          id="products"
+        ></div>
+      </div>
+    </main>
+
+    <!-- ############################################ -->
+    <script src="index.js"></script>
+  </body>
+</html>
